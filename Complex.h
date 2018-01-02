@@ -25,6 +25,7 @@ class Complex
 
     bool operator==(const Complex &other) const;
     bool operator!=(const Complex &other) const;
+    Complex operator*() const;
 };
 
 ostream &operator<<(ostream &out, const Complex &c);

@@ -22,8 +22,13 @@ Complex operator+(double d,const Complex &c1){
     return Complex(c1.getReal() + d, c1.getImaginary());
 }
 
+/******************/
+
 Complex::Complex() : real(0), imaginary(0)
 {
+}
+Complex Complex::operator*() const{
+    return Complex(real, -imaginary);
 }
 
 Complex::Complex(double real, double imaginary) : real(real), imaginary(imaginary)
