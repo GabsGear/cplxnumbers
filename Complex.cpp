@@ -41,4 +41,10 @@ const Complex &Complex::operator=(const Complex &other)
 
     return *this;
 }
+ bool Complex::operator==(const Complex &other) const{
+    return (real == other.real) && (imaginary == other.imaginary);
+ }
+ bool Complex::operator!=(const Complex &other) const{
+     return !(*this==other);
+ }
 }
