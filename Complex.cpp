@@ -49,7 +49,7 @@ Complex operator*(const double d, const Complex &c1){
     return Complex(c1.getReal() * d, c1.getImaginary() * d);
 }
 
-/******************/
+/*************************************************************/
 
 Complex::Complex() : real(0), imaginary(0)
 {
@@ -66,6 +66,15 @@ Complex::Complex(const Complex &other)
     real = other.real;
     imaginary = other.imaginary;
 }
+
+double Complex::getModulus(){
+    return (sqrt(real*real + imaginary*imaginary));
+}
+
+double Complex::getPhase(){
+    return atan(imaginary / real);
+}
+
 const Complex &Complex::operator=(const Complex &other)
 {
     real = other.real;

@@ -2,7 +2,7 @@
 #ifndef COMPLEX_H_
 #define COMPLEX_H_
 #include <iostream>
-
+#include <math.h>  
 using namespace std;
 
 namespace complexnumbers
@@ -18,14 +18,18 @@ class Complex
     Complex();
     Complex(double real, double imaginary);
     Complex(const Complex &other);
-    const Complex &operator=(const Complex &other);
 
     double getReal() const { return real; }
     double getImaginary() const { return imaginary; }
 
+    double getModulus();
+    double getPhase();
+
+    const Complex &operator=(const Complex &other);
     bool operator==(const Complex &other) const;
     bool operator!=(const Complex &other) const;
     Complex operator*() const;
+
 };
 
 ostream &operator<<(ostream &out, const Complex &c);
