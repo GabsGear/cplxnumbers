@@ -8,7 +8,7 @@ How to use:
 
 First #include "Complex.h" in your header and use namespace complexnumbers;
 
-**All calculus are made in rectangular form, if you have a number in polar form first use convertToRect method, eval the result and use convertToPolar method to get a polat result.**
+**All calculus are made in rectangular form, if you have a number in polar form first use convertToRect method, eval the result and use convertToPolar method to get a polar result.**
 
 For a complex number in rectangular form declaration uses:
 
