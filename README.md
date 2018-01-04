@@ -62,6 +62,14 @@ Operations:
 
       Complex result = 3*c1; // result assume (6, 15)
       
+      
+  Modulus and phase
+  
+  For get Modulus and phase use the methods getModulus and getPhase, Example:
+  
+         Complex c1(2, 5);
+         float modulus = c1.getModulus();
+         float phase = c1.getPhase; 
    
   
     
