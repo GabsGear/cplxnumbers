@@ -25,6 +25,9 @@ class Complex
     double getModulus();
     double getPhase();
 
+    Complex convertToPolar();
+    Complex convertToRect();
+
     const Complex &operator=(const Complex &other);
     bool operator==(const Complex &other) const;
     bool operator!=(const Complex &other) const;

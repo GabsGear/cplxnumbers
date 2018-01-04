@@ -14,6 +14,10 @@ int main()
     cout << c1.getPhase() <<endl;
 
     cout << c1 / c2 << endl;
+
+    cout << c1.convertToPolar() << endl;
+    c2 = c1.convertToPolar();
+    cout << c2.convertToRect() << endl;
     return 0;
 
 }

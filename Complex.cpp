@@ -90,6 +90,13 @@ double Complex::getPhase(){
     return atan(imaginary / real);
 }
 
+Complex Complex::convertToPolar(){
+    return Complex(getModulus(), getPhase());
+}
+Complex Complex::convertToRect(){
+    return Complex(real*cos(imaginary), real*sin(imaginary));
+}
+
 const Complex &Complex::operator=(const Complex &other)
 {
     real = other.real;
