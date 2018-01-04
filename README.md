@@ -49,9 +49,9 @@ Operations:
     Complex c1(1, 1);
     Complex conj = (*c1) // conj assume (1, -1)
       
-  Multiplication (be careful with Conjugated)
+  Multiplication (be careful with Conjugated) and division
   
-  Uses * operator with two complex numbers or complex and real
+  Uses * operator for mult and / for division (mult with Conjulgated) with two complex numbers or complex and real
   Example:
   
       Complex c1(2, 5);
