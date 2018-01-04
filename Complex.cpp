@@ -35,6 +35,20 @@ Complex operator-(double d,const Complex &c1){
     return Complex(c1.getReal() - d, c1.getImaginary());
 }
 
+Complex operator*(const Complex &c1, const Complex &c2){
+    // (a + bi) . (c + di)
+    // (ac - bd) + (ad + bc)i.
+    return Complex(c1.getReal()*c2.getReal() - c1.getImaginary()*c2.getImaginary(), 
+            c1.getReal()*c2.getImaginary() + c1.getImaginary() * c2.getReal());
+}
+
+Complex operator*(const Complex &c1, double d){
+    return Complex(c1.getReal() * d, c1.getImaginary() * d);
+}
+Complex operator*(const double d, const Complex &c1){
+    return Complex(c1.getReal() * d, c1.getImaginary() * d);
+}
+
 /******************/
 
 Complex::Complex() : real(0), imaginary(0)
