@@ -45,8 +45,23 @@ Complex operator*(const Complex &c1, const Complex &c2){
 Complex operator*(const Complex &c1, double d){
     return Complex(c1.getReal() * d, c1.getImaginary() * d);
 }
+
 Complex operator*(const double d, const Complex &c1){
     return Complex(c1.getReal() * d, c1.getImaginary() * d);
+}
+
+Complex operator/(const Complex &c1, const Complex &c2){
+    Complex conj;
+    conj = *c2;
+    return c1*conj;
+}
+
+Complex operator/(const Complex &c1, double d){
+    return Complex(c1.getReal() / d, c1.getImaginary() * d);
+}
+
+Complex operator/(const double d, const Complex &c1){
+    return Complex(c1.getReal() / d, c1.getImaginary() * d);
 }
 
 /*************************************************************/
