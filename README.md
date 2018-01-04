@@ -8,12 +8,15 @@ How to use:
 
 First #include "Complex.h" in your header and use namespace complexnumbers;
 
+**All calculus are made in rectangular form, if you have a number in polar form first use convertToRect method, eval the result and use convertToPolar method to get a polat result.**
+
 For a complex number in rectangular form declaration uses:
+
     Complex number(real, imaginary)
     
-Operations:
+**Operations:**
   
-  Copy and compare:
+ **Copy and compare:**
   If you want copy a number uses = operator
   Example:
   
@@ -22,11 +25,11 @@ Operations:
         
         In this case c2 asume c1 value.
         
-  For compare equality uses operators == and !=, the result is a bool 
+  For compare **equality** uses operators == and !=, the result is a bool 
         
         if (c1 = c2) or if (c1 != c2) this operations returns true or false.
     
-  SUm and subtraction
+  **Sum and subtraction**
   
   Uses operators '+' and '-'
   Example:
@@ -41,7 +44,7 @@ Operations:
       Complex result = c1 + 10; // result assume (13, 3)
   
   
-  Conjugated complex
+ **Conjugated complex**
   
   If you have a complex and want a conjugated uses (*number)
   Example:
@@ -49,7 +52,7 @@ Operations:
     Complex c1(1, 1);
     Complex conj = (*c1) // conj assume (1, -1)
       
-  Multiplication (be careful with Conjugated) and division
+  **Multiplication (be careful with Conjugated) and division**
   
   Uses * operator for mult and / for division (mult with Conjulgated) with two complex numbers or complex and real
   Example:
@@ -63,7 +66,7 @@ Operations:
       Complex result = 3*c1; // result assume (6, 15)
       
       
-  Modulus and phase
+  **Modulus and phase**
   
   For get Modulus and phase use the methods getModulus and getPhase, Example:
   
@@ -71,6 +74,14 @@ Operations:
          float modulus = c1.getModulus();
          float phase = c1.getPhase; 
    
-  
+  **Convert to polar**
+
+         Complex c1;
+         c1.convertToPolar();
+          
+ **Convert polar to rectangular**
+    
+        Complex c1;
+        c1.convertToRect();
     
   
